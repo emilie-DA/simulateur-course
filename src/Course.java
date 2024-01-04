@@ -1,5 +1,13 @@
 import java.util.*;
 
+//course hippique de 12 à 20 chevaux 
+//Un tiercé s’intéresse au classement des 3 premiers
+//un quarté des 4 premiers
+//un quinté des 5 premiers
+//Le programme demande en boucle à l’utilisateur le nombre de chevaux de la course et son type jusqu’à ce qu’il indique  que le programme se termine
+//affiche alors une arrivée tirée aléatoirement de la course.
+
+
 
 
 public class Course {
