@@ -56,8 +56,16 @@ public class Course {
 			}
 			else if (response.toLowerCase().equals("4"))
 			{
+<<<<<<< Updated upstream
 				command = true;
+=======
+				
+				racesOver = true;
+>>>>>>> Stashed changes
 				System.out.println("A bientot " );
+			}
+			else {
+				System.out.println("Mauvai chois");
 			}
 		}
 
