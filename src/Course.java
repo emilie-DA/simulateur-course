@@ -18,10 +18,15 @@ public class Course {
 
 		// Déclaration de nos variables :
 		String response;
+		int nbHorses;
+		//String horsNumber;
 
-		boolean command = false;
+		boolean racesOver = false;
 
-		while (command == false) {
+		while (racesOver == false) {
+			System.out.println("Combien de chevaux voulez vous?");
+			nbHorses = scanner.nextInt();
+			response = scanner.nextLine();
 			System.out.println("Quelle tiercé Voulez vous jouer :[1-Tiercé],[2-Quarté],[3-Quinté];[4-Exit]");
 			response = scanner.nextLine();
 
@@ -30,7 +35,7 @@ public class Course {
 				System.out.println("Voici votre Tiércer : " );
 				Random objGenerator = new Random();
 				for (int iCount = 1; iCount< 4; iCount++){
-					int randomNumber = objGenerator.nextInt(20);
+					int randomNumber = objGenerator.nextInt(nbHorses) + 1;
 					System.out.println("cheval : " + randomNumber); 
 				}
 
@@ -40,7 +45,7 @@ public class Course {
 				System.out.println("Voici votre Quarté : " );
 				Random objGenerator = new Random();
 				for (int iCount = 1; iCount< 5; iCount++){
-					int randomNumber = objGenerator.nextInt(20);
+					int randomNumber = objGenerator.nextInt(nbHorses) + 1;
 					System.out.println("cheval : " + randomNumber); 
 				}
 			}
@@ -49,14 +54,14 @@ public class Course {
 				System.out.println("Voici votre Quinté : " );
 				Random objGenerator = new Random();
 				for (int iCount = 1; iCount< 6; iCount++){
-					int randomNumber = objGenerator.nextInt(20);
+					int randomNumber = objGenerator.nextInt(nbHorses) + 1;
 					System.out.println("cheval : " + randomNumber); 
 				}
 
 			}
 			else if (response.toLowerCase().equals("4"))
 			{
-				command = true;
+				racesOver = true;
 				System.out.println("A bientot " );
 			}
 		}
