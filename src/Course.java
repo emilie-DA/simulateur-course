@@ -19,6 +19,7 @@ public class Course {
 
 		// Déclaration de nos variables :
 		String response;
+
 		int hors;
 
 		boolean command = false;
@@ -31,17 +32,21 @@ public class Course {
 			System.out.println("Combien de chevaux voulez vous ?");
 			hors = sc.nextInt();
 			
+
 			System.out.println("Quelle tiercé Voulez vous jouer :[1-Tiercé],[2-Quarté],[3-Quinté];[4-Exit]");
 			response = scanner.nextLine();
 
 			if (response.toLowerCase().equals("1")) 
 			{
+
 				 creatrandom("voici votre Tiérce" , 4 ,hors);
 				
+
 
 			}
 			else if (response.toLowerCase().equals("2"))
 			{
+
 				
 					creatrandom("voici votre Quarté" , 5, hors);
 				
@@ -52,10 +57,11 @@ public class Course {
 					creatrandom("voici votre Quinté" , 6,hors);
 				
 
+
 			}
 			else if (response.toLowerCase().equals("4"))
 			{
-				command = true;
+				racesOver = true;
 				System.out.println("A bientot " );
 			}
 			else {
